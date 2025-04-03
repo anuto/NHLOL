@@ -1,0 +1,494 @@
+[
+    {
+        "game_id": 2024020003,
+        "date": "2024-10-08",
+        "home_team": "SEA",
+        "away_team": "STL"
+    },
+    {
+        "game_id": 2024020033,
+        "date": "2024-10-12",
+        "home_team": "MIN",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020039,
+        "date": "2024-10-13",
+        "home_team": "DAL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020053,
+        "date": "2024-10-15",
+        "home_team": "NSH",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020071,
+        "date": "2024-10-17",
+        "home_team": "SEA",
+        "away_team": "PHI"
+    },
+    {
+        "game_id": 2024020087,
+        "date": "2024-10-19",
+        "home_team": "SEA",
+        "away_team": "CGY"
+    },
+    {
+        "game_id": 2024020106,
+        "date": "2024-10-22",
+        "home_team": "SEA",
+        "away_team": "COL"
+    },
+    {
+        "game_id": 2024020116,
+        "date": "2024-10-24",
+        "home_team": "SEA",
+        "away_team": "WPG"
+    },
+    {
+        "game_id": 2024020135,
+        "date": "2024-10-26",
+        "home_team": "SEA",
+        "away_team": "CAR"
+    },
+    {
+        "game_id": 2024020149,
+        "date": "2024-10-29",
+        "home_team": "MTL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020161,
+        "date": "2024-10-31",
+        "home_team": "TOR",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020178,
+        "date": "2024-11-02",
+        "home_team": "OTT",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020187,
+        "date": "2024-11-03",
+        "home_team": "BOS",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020202,
+        "date": "2024-11-05",
+        "home_team": "COL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020223,
+        "date": "2024-11-08",
+        "home_team": "SEA",
+        "away_team": "VGK"
+    },
+    {
+        "game_id": 2024020251,
+        "date": "2024-11-12",
+        "home_team": "SEA",
+        "away_team": "CBJ"
+    },
+    {
+        "game_id": 2024020266,
+        "date": "2024-11-14",
+        "home_team": "SEA",
+        "away_team": "CHI"
+    },
+    {
+        "game_id": 2024020273,
+        "date": "2024-11-16",
+        "home_team": "SEA",
+        "away_team": "NYI"
+    },
+    {
+        "game_id": 2024020287,
+        "date": "2024-11-17",
+        "home_team": "SEA",
+        "away_team": "NYR"
+    },
+    {
+        "game_id": 2024020304,
+        "date": "2024-11-20",
+        "home_team": "SEA",
+        "away_team": "NSH"
+    },
+    {
+        "game_id": 2024020320,
+        "date": "2024-11-23",
+        "home_team": "LAK",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020343,
+        "date": "2024-11-25",
+        "home_team": "ANA",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020360,
+        "date": "2024-11-27",
+        "home_team": "SEA",
+        "away_team": "ANA"
+    },
+    {
+        "game_id": 2024020371,
+        "date": "2024-11-29",
+        "home_team": "SJS",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020387,
+        "date": "2024-11-30",
+        "home_team": "SEA",
+        "away_team": "SJS"
+    },
+    {
+        "game_id": 2024020401,
+        "date": "2024-12-03",
+        "home_team": "CAR",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020416,
+        "date": "2024-12-05",
+        "home_team": "NYI",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020420,
+        "date": "2024-12-06",
+        "home_team": "NJD",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020436,
+        "date": "2024-12-08",
+        "home_team": "NYR",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020456,
+        "date": "2024-12-10",
+        "home_team": "SEA",
+        "away_team": "FLA"
+    },
+    {
+        "game_id": 2024020472,
+        "date": "2024-12-12",
+        "home_team": "SEA",
+        "away_team": "BOS"
+    },
+    {
+        "game_id": 2024020488,
+        "date": "2024-12-14",
+        "home_team": "SEA",
+        "away_team": "TBL"
+    },
+    {
+        "game_id": 2024020505,
+        "date": "2024-12-17",
+        "home_team": "SEA",
+        "away_team": "OTT"
+    },
+    {
+        "game_id": 2024020516,
+        "date": "2024-12-19",
+        "home_team": "CHI",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020538,
+        "date": "2024-12-21",
+        "home_team": "VGK",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020543,
+        "date": "2024-12-22",
+        "home_team": "COL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020567,
+        "date": "2024-12-28",
+        "home_team": "VAN",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020588,
+        "date": "2024-12-30",
+        "home_team": "SEA",
+        "away_team": "UTA"
+    },
+    {
+        "game_id": 2024020613,
+        "date": "2025-01-02",
+        "home_team": "SEA",
+        "away_team": "VAN"
+    },
+    {
+        "game_id": 2024020631,
+        "date": "2025-01-04",
+        "home_team": "SEA",
+        "away_team": "EDM"
+    },
+    {
+        "game_id": 2024020640,
+        "date": "2025-01-06",
+        "home_team": "SEA",
+        "away_team": "NJD"
+    },
+    {
+        "game_id": 2024020660,
+        "date": "2025-01-09",
+        "home_team": "CBJ",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020670,
+        "date": "2025-01-11",
+        "home_team": "BUF",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020684,
+        "date": "2025-01-12",
+        "home_team": "DET",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020696,
+        "date": "2025-01-14",
+        "home_team": "PIT",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020716,
+        "date": "2025-01-16",
+        "home_team": "WPG",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020736,
+        "date": "2025-01-18",
+        "home_team": "SEA",
+        "away_team": "LAK"
+    },
+    {
+        "game_id": 2024020742,
+        "date": "2025-01-20",
+        "home_team": "SEA",
+        "away_team": "BUF"
+    },
+    {
+        "game_id": 2024020770,
+        "date": "2025-01-23",
+        "home_team": "SEA",
+        "away_team": "WSH"
+    },
+    {
+        "game_id": 2024020778,
+        "date": "2025-01-25",
+        "home_team": "SEA",
+        "away_team": "PIT"
+    },
+    {
+        "game_id": 2024020797,
+        "date": "2025-01-27",
+        "home_team": "EDM",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020806,
+        "date": "2025-01-28",
+        "home_team": "SEA",
+        "away_team": "ANA"
+    },
+    {
+        "game_id": 2024020821,
+        "date": "2025-01-30",
+        "home_team": "SEA",
+        "away_team": "SJS"
+    },
+    {
+        "game_id": 2024020843,
+        "date": "2025-02-02",
+        "home_team": "SEA",
+        "away_team": "CGY"
+    },
+    {
+        "game_id": 2024020857,
+        "date": "2025-02-04",
+        "home_team": "SEA",
+        "away_team": "DET"
+    },
+    {
+        "game_id": 2024020869,
+        "date": "2025-02-06",
+        "home_team": "SEA",
+        "away_team": "TOR"
+    },
+    {
+        "game_id": 2024020887,
+        "date": "2025-02-08",
+        "home_team": "CGY",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020896,
+        "date": "2025-02-22",
+        "home_team": "FLA",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020909,
+        "date": "2025-02-23",
+        "home_team": "TBL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020926,
+        "date": "2025-02-25",
+        "home_team": "STL",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024020960,
+        "date": "2025-03-01",
+        "home_team": "SEA",
+        "away_team": "VAN"
+    },
+    {
+        "game_id": 2024020982,
+        "date": "2025-03-04",
+        "home_team": "SEA",
+        "away_team": "MIN"
+    },
+    {
+        "game_id": 2024020993,
+        "date": "2025-03-06",
+        "home_team": "NSH",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021004,
+        "date": "2025-03-08",
+        "home_team": "PHI",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021014,
+        "date": "2025-03-09",
+        "home_team": "WSH",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021039,
+        "date": "2025-03-12",
+        "home_team": "SEA",
+        "away_team": "MTL"
+    },
+    {
+        "game_id": 2024021054,
+        "date": "2025-03-14",
+        "home_team": "SEA",
+        "away_team": "UTA"
+    },
+    {
+        "game_id": 2024021072,
+        "date": "2025-03-16",
+        "home_team": "SEA",
+        "away_team": "WPG"
+    },
+    {
+        "game_id": 2024021084,
+        "date": "2025-03-18",
+        "home_team": "CHI",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021088,
+        "date": "2025-03-19",
+        "home_team": "MIN",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021116,
+        "date": "2025-03-22",
+        "home_team": "EDM",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021137,
+        "date": "2025-03-25",
+        "home_team": "CGY",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021151,
+        "date": "2025-03-27",
+        "home_team": "SEA",
+        "away_team": "EDM"
+    },
+    {
+        "game_id": 2024021169,
+        "date": "2025-03-29",
+        "home_team": "SEA",
+        "away_team": "DAL"
+    },
+    {
+        "game_id": 2024021181,
+        "date": "2025-03-31",
+        "home_team": "SEA",
+        "away_team": "DAL"
+    },
+    {
+        "game_id": 2024021196,
+        "date": "2025-04-02",
+        "home_team": "VAN",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021221,
+        "date": "2025-04-05",
+        "home_team": "SJS",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021233,
+        "date": "2025-04-07",
+        "home_team": "LAK",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021243,
+        "date": "2025-04-08",
+        "home_team": "UTA",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021258,
+        "date": "2025-04-10",
+        "home_team": "VGK",
+        "away_team": "SEA"
+    },
+    {
+        "game_id": 2024021275,
+        "date": "2025-04-12",
+        "home_team": "SEA",
+        "away_team": "STL"
+    },
+    {
+        "game_id": 2024021300,
+        "date": "2025-04-15",
+        "home_team": "SEA",
+        "away_team": "LAK"
+    }
+]
