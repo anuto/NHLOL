@@ -1,5 +1,5 @@
 from API_CONSTANTS import *
-from mongo_wrapper import *
+from db.mongo_wrapper import *
 import requests
 
 def get_team_schedule_url(team_abbrev):

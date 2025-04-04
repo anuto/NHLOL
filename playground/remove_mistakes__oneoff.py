@@ -1,4 +1,4 @@
-from mongo_wrapper import *
+from db.mongo_wrapper import *
 
 games_cursor = get_collection('games')
 

@@ -1,4 +1,4 @@
-from secrets.mongo import MONGO_URI, DB_NAME
+from db.secrets.mongo import MONGO_URI, DB_NAME
 import pymongo
 
 def get_db():
