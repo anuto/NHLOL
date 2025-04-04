@@ -14,6 +14,9 @@ games_cursor = get_collection('games', {'gameType': 2})
 print("getting rosters...")
 rosters_table = get_raw_collection('rosters')
 
+print("getting goals...")
+goals_table = get_raw_collection('goals')
+
 multikills = {}
 
 game_num = 1
@@ -24,10 +27,8 @@ for game in games_cursor:
 
 	game_id = game['_id']
 
-# game_id = 2024010015
-
-	print("getting goals...")
-	goals_cursor = get_collection('goals', {'gameId': game_id})
+	# print("getting goals for game...")
+	goals_cursor = goals_table.find({'gameId': game_id, 'periodNumber': {'$lt':  4}})
 
 	prev_scoring_team = None
 	prev_period = -1
@@ -40,7 +41,7 @@ for game in games_cursor:
 		goal_num += 1
 
 		period = goal['periodNumber']
-		print("[period " + str(period) + "] " + goal['timeInPeriod'])
+		# print("[period " + str(period) + "] " + goal['timeInPeriod'])
 
 		scorer_id = goal['scoringPlayerId']
 		scoring_player_search = rosters_table.find({'gameId': game_id, 'playerId': scorer_id})
