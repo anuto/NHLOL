@@ -10,12 +10,16 @@ def get_db():
 
 	return client[DB_NAME]
 
+def get_raw_collection(collection_name):
+	db = get_db()
+	collection = db[collection_name]
+	return collection
 
-def get_collection(collection_name):
+def get_collection(collection_name, query = {}):
 	db = get_db()
 	collection = db[collection_name]
 
-	cursor = collection.find()
+	cursor = collection.find(query)
 	return cursor
 
 def update_players_collection(collection_name, data):
@@ -46,7 +50,6 @@ def update_goals_collection(collection_name, data):
 		) 
 	
 	print("updated collection: " + collection_name + "!")
-
 
 
 # fields_to_add: {updated_field: value}
