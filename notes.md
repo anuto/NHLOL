@@ -1,3 +1,21 @@
+id also like to know how often a b2b goal -> victory. need to look at gameoutcome too. yawn
+
+hmm. need a way to check ALL back to back goals, not just only doubles. we have that data in quadras and triples, for example, which are exponentially smaller...do we just run through all of them...? 
+
+> they shouldn't be double counted by how we've set things up. so it shouldn't be too bad. for example, a quadra can be 3 double goals as well. maybe.
+
+good games to check correctness on:
+- 2024020895
+- 2024020764
+- 2024020726
+- 2024020011
+
+> 1312 regulation games at this point.
+
+> we need a backfill and daily run procedure...
+
+> 1972 regulation time goals on in season games
+
 `https://api.nhle.com/stats/rest/en/franchise?` <- active franchises
 
 * need to add a script to run as a cron job to update specifically only today's games 

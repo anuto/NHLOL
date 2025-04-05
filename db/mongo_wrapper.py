@@ -22,6 +22,19 @@ def get_collection(collection_name, query = {}):
 	cursor = collection.find(query)
 	return cursor
 
+def rewrite_collection(collection_name, data):
+	db = get_db()
+
+	print("dropping old collection " + collection_name)
+	collection = db[collection_name]
+	collection.drop()
+
+	collection = db[collection_name]
+
+	print("adding to new collection " + collection_name)
+	collection.insert_many(data)
+	print("done!")
+
 def update_players_collection(collection_name, data):
 	db = get_db()
 	collection = db[collection_name]
