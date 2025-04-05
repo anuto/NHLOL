@@ -3,8 +3,8 @@ from db.mongo_wrapper import *
 import requests
 import warnings
 
-UPDATE_GOALS = False
-UPDATE_GAMES = False
+UPDATE_GOALS = True
+UPDATE_GAMES = True
 UPDATE_ROSTERS = True
 
 # this follows the 'update_' paradigm, but it takes some time to run and the prior data
@@ -126,36 +126,37 @@ def process_pbp_roster_for_game(pbp_data, game_id):
 
 	return roster
 
-games_cursor = get_collection('games')
-game_number = 1
+def update_games(query = {}):
+	games_cursor = get_collection('games', query)
+	game_number = 1
 
-games_expanded_data = {}
+	games_expanded_data = {}
 
-for game in games_cursor:
-	print("processing game " + str(game_number))
-	game_number += 1
+	for game in games_cursor:
+		print("processing game " + str(game_number))
+		game_number += 1
 
-	game_id = game['_id']
-	play_by_play_url = get_play_by_play_url(game_id)
-	print(play_by_play_url)
+		game_id = game['_id']
+		play_by_play_url = get_play_by_play_url(game_id)
+		print(play_by_play_url)
 
-	pbp_response = requests.get(play_by_play_url)
-	pbp_data = pbp_response.json()
+		pbp_response = requests.get(play_by_play_url)
+		pbp_data = pbp_response.json()
 
-	if UPDATE_GOALS:
-		process_play_by_plays(pbp_data)
+		if UPDATE_GOALS:
+			process_play_by_plays(pbp_data)
 
-	if UPDATE_GAMES:
-		game_expanded_data = process_expanded_game_info(pbp_data)
+		if UPDATE_GAMES:
+			game_expanded_data = process_expanded_game_info(pbp_data)
 
-		print("updating game " + str(game_id) + " in db...")
-		add_fields_to_document_in_collection('games', game_id, game_expanded_data)
-		print("done!")
+			print("updating game " + str(game_id) + " in db...")
+			add_fields_to_document_in_collection('games', game_id, game_expanded_data)
+			print("done!")
 
-	if UPDATE_ROSTERS:
-		print("updating roster for game " + str(game_id) + " in db...")
-		game_roster = process_pbp_roster_for_game(pbp_data, game_id)
-		update_players_collection('rosters', game_roster)
-		print("done!")
+		if UPDATE_ROSTERS:
+			print("updating roster for game " + str(game_id) + " in db...")
+			game_roster = process_pbp_roster_for_game(pbp_data, game_id)
+			update_players_collection('rosters', game_roster)
+			print("done!")
 
-	print()
+		print()

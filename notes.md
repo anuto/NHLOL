@@ -1,3 +1,13 @@
+* testing backfill
+
+04-03 2024021205, 2024021204
+
+{'gameDate': '2025-04-03'}
+
+[2024021197, 2024021198, 2024021199, 2024021200, 2024021201, 2024021202, 2024021203, 2024021204, 2024021205]
+
+good stuff. automated for processing yesterday, now.
+
 * id also like to know how often a b2b goal -> victory. need to look at gameoutcome too. yawn
 
 * good games to check correctness on:
