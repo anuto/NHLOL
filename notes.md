@@ -1,3 +1,11 @@
+* we should change the update stuff to a
+	> write to tmp namespace
+	> drop current partition
+	> swap and delete tmp
+
+we have some real cleanup to do around the mongowrapper in general though :+1:
+
+
 * testing backfill
 
 04-03 2024021205, 2024021204

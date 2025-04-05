@@ -51,28 +51,32 @@ def process_game(game, rosters_table, goals_table, multigoals):
 	if len(combo) > 1:
 		multigoals.append({'gameId': game_id, 'combo': combo})
 
+def process_games(games_cursor):
+	print("getting rosters...")
+	rosters_table = get_raw_collection('rosters')
 
-print("getting games...")
-games_cursor = get_collection('games', {'gameType': 2})
+	print("getting goals...")
+	goals_table = get_raw_collection('goals')
 
-print("getting rosters...")
-rosters_table = get_raw_collection('rosters')
+	game_num = 1
 
-print("getting goals...")
-goals_table = get_raw_collection('goals')
+	multigoals = []
 
-game_num = 1
+	for game in games_cursor:
+		print("processing game " + str(game_num))
+		game_num += 1
+		
+		process_game(game, rosters_table, goals_table, multigoals)
 
-multigoals = []
+		print()
+	return multigoals
 
-for game in games_cursor:
-	print("processing game " + str(game_num))
-	game_num += 1
-	
-	process_game(game, rosters_table, goals_table, multigoals)
+	# not the greatest, but there's no good way to validate. no unique keys
+	# since we've chosen to aggregate the multigoals.
 
-	print()
+def backfill_multigoals():
+	print("getting games...")
+	games_cursor = get_collection('games', {'gameType': 2})
+	multigoals = process_games(games_cursor)
+	rewrite_collection('multigoals', multigoals)
 
-# not the greatest, but there's no good way to validate. no unique keys
-# since we've chosen to aggregate the multigoals.
-rewrite_collection('multigoals', multigoals)

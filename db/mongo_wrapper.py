@@ -35,6 +35,22 @@ def rewrite_collection(collection_name, data):
 	collection.insert_many(data)
 	print("done!")
 
+def rewrite_collection_for_game_ids(collection_name, data, game_ids):
+	db = get_db()
+
+	print("removing " + str(game_ids) + " from collection " + collection_name)
+	collection = db[collection_name]
+	query_filter = {
+		'gameId': {
+			'$in': game_ids
+		}
+	}
+	collection.delete_many(query_filter)
+
+	print("adding new entries to collection " + collection_name)
+	collection.insert_many(data)
+	print("done!")
+
 def update_players_collection(collection_name, data):
 	db = get_db()
 	collection = db[collection_name]
@@ -64,6 +80,13 @@ def update_goals_collection(collection_name, data):
 	
 	print("updated collection: " + collection_name + "!")
 
+def insert_in_collection(collection_name, data):
+	db = get_db()
+	
+	collection = db[collection_name]
+	collection.insert_many(data)
+	
+	print("updated collection: " + collection_name + "!")
 
 # fields_to_add: {updated_field: value}
 def add_fields_to_document_in_collection(collection_name, game_id, fields_to_add):
