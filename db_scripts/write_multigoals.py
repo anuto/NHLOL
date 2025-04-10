@@ -14,11 +14,16 @@ def get_goal_info(goal, game_id, rosters_table, goals_table):
 
 	goal_info['scoringTeamId'] = scoring_player['teamId']
 	goal_info['scoringPlayerId'] = scorer_id
+	goal_info['goalieId'] = goal['goalieId']
 	
 	goal_info['gameId'] = game_id
 	
 	goal_info['timeInPeriod'] = goal['timeInPeriod']
 	goal_info['periodNumber'] = goal['periodNumber']
+
+	if 'videoUrl' in goal:
+		goal_info['videoUrl'] = goal['videoUrl']
+		
 	goal_info['_id'] = goal['_id']
 
 	return goal_info

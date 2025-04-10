@@ -47,8 +47,9 @@ def rewrite_collection_for_game_ids(collection_name, data, game_ids):
 	}
 	collection.delete_many(query_filter)
 
-	print("adding new entries to collection " + collection_name)
-	collection.insert_many(data)
+	if data:
+		print("adding new entries to collection " + collection_name)
+		collection.insert_many(data)
 	print("done!")
 
 def update_players_collection(collection_name, data):

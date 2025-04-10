@@ -1,7 +1,9 @@
-from API_CONSTANTS import *
+from db_scripts.API_CONSTANTS import *
 from db.mongo_wrapper import *
 import requests
 import warnings
+from db_scripts.get_video_url import get_video_url
+
 
 UPDATE_GOALS = True
 UPDATE_GAMES = True
@@ -55,6 +57,9 @@ def process_play_by_plays(pbp_data):
 			copy_field(goal, play_data['details'], 'shotType')
 			copy_field(goal, play_data['details'], 'scoringPlayerId')
 
+			if 'details' in play_data and 'goalieInNetId' in play_data['details']:
+				goal['goalieId'] = play_data['details']['goalieInNetId']
+
 			period_number = play_data['periodDescriptor']['number']
 			goal['periodNumber'] = period_number
 
@@ -68,6 +73,10 @@ def process_play_by_plays(pbp_data):
 			elif period_number < 4:
 				warnings.warn("no replay for goal event " + str(play_data['eventId']) + " at idx " + str(i))
 				goal['highlightClipSharingUrl'] = None
+
+			if 'highlightClipSharingUrl' in goal and goal['highlightClipSharingUrl']:
+				nhl_video_url = goal['highlightClipSharingUrl']
+				goal['videoUrl'] = get_video_url(nhl_video_url)
 
 			goals.append(goal)
 
@@ -96,6 +105,30 @@ def process_expanded_game_info(pbp_data):
 		game_extra_data['numberPeriods'] = pbp_data['periodDescriptor']['number']
 	else:
 		game_extra_data['numberPeriods'] = None
+
+	if 'gameOutcome' in pbp_data:
+		game_extra_data['lastPeriodType'] = pbp_data['gameOutcome']['lastPeriodType	']
+
+	if 'awayTeam' in pbp_data:
+		awayTeam = pbp_data['awayTeam']
+
+		if 'score' in awayTeam:
+			game_extra_data['awayTeamScore'] = awayTeam['score']
+
+	if 'homeTeam' in pbp_data:
+		homeTeam = pbp_data['homeTeam']
+
+		if 'score' in homeTeam:
+			game_extra_data['homeTeamScore'] = homeTeam['score']
+
+	if 'homeTeamScore' in game_extra_data and 'awayTeamScore' in game_extra_data:
+		homeTeamScore = game_extra_data['homeTeamScore']
+		awayTeamScore = game_extra_data['awayTeamScore']
+
+		if homeTeamScore > awayTeamScore:
+			game_extra_data['winningTeam'] = homeTeam['id']
+		else:
+			game_extra_data['winningTeam'] = awayTeam['id']
 
 	print(game_extra_data)
 	return game_extra_data

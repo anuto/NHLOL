@@ -129,5 +129,7 @@ def examine_all_doubles(time_limit):
 
 # only 4 teams - MTL, WSH, SEA, and VAN. All one each.
 # games = examine_doubles(10)
-games = examine_all_doubles(10)
+# games = examine_all_doubles(10)
 
+games = process_all_multigoals()
+# print(collections.Counter(games))

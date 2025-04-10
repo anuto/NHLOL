@@ -1,3 +1,6 @@
+LOOK INTO WHY THIS ONE DOESN'T HAVE VIDEO URLS
+2024010001
+
 * we should change the update stuff to a
 	> write to tmp namespace
 	> drop current partition
